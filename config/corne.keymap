@@ -38,9 +38,33 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
+        };
+
+        left_tap_interrupt: left_tap_interrupt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_TAP_INTERRUPT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <6 7 8 9 10 11 23 22 21 20 19 18 30 32 31 33 34 35>;
+        };
+
+        right_tap_interrupt: right_tap_interrupt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_TAP_INTERRUPT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 3>;
         };
     };
 
@@ -55,10 +79,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                              &kp Q                                &kp W                                   &kp E                                     &kp R                                   &kp T          &kp Y      &kp U                                   &kp I                                     &kp O                                   &kp P                                               &kp BSPC
-&hold_pref_homerow_mods LSHIFT ESC   &tap_preferred_homerow_mods LCTRL A  &tap_preferred_homerow_mods LEFT_ALT S  &tap_preferred_homerow_mods LEFT_SHIFT D  &tap_preferred_homerow_mods LEFT_GUI F  &kp G          &kp H      &tap_preferred_homerow_mods LEFT_GUI J  &tap_preferred_homerow_mods LEFT_SHIFT K  &tap_preferred_homerow_mods LEFT_ALT L  &tap_preferred_homerow_mods LEFT_CONTROL SEMICOLON  &tap_preferred_homerow_mods RIGHT_SHIFT SQT
-&hold_pref_homerow_mods LCTRL GRAVE  &kp Z                                &kp X                                   &kp C                                     &kp V                                   &kp B          &kp N      &kp M                                   &kp COMMA                                 &kp DOT                                 &kp FSLH                                            &hold_pref_homerow_mods RCTRL BACKSLASH
-                                                                                                                  &bh LALT LBKT                             &bh LEFT_COMMAND EQUAL                  &lt 1 SPACE    &lt 2 RET  &bh LEFT_GUI MINUS                      &bh LEFT_ALT RBKT
+&kp TAB                              &kp Q                                &kp W                                   &kp E                              &kp R                                       &kp T          &kp Y      &kp U                                   &kp I                                  &kp O                                   &kp P                                               &kp BSPC
+&hold_pref_homerow_mods LSHIFT ESC   &tap_preferred_homerow_mods LCTRL A  &tap_preferred_homerow_mods LEFT_ALT S  &left_tap_interrupt LEFT_SHIFT D   &tap_preferred_homerow_mods LEFT_GUI F      &kp G          &kp H      &tap_preferred_homerow_mods LEFT_GUI J  &right_tap_interrupt LEFT_SHIFT K      &tap_preferred_homerow_mods LEFT_ALT L  &tap_preferred_homerow_mods LEFT_CONTROL SEMICOLON  &tap_preferred_homerow_mods RIGHT_SHIFT SQT
+&hold_pref_homerow_mods LCTRL GRAVE  &kp Z                                &kp X                                   &kp C                              &kp V                                       &kp B          &kp N      &kp M                                   &kp COMMA                              &kp DOT                                 &kp FSLH                                            &hold_pref_homerow_mods RCTRL BACKSLASH
+                                                                                                                  &hold_pref_homerow_mods LALT LBKT  &hold_pref_homerow_mods LEFT_COMMAND EQUAL  &lt 1 SPACE    &lt 2 RET  &hold_pref_homerow_mods LEFT_GUI MINUS  &hold_pref_homerow_mods LEFT_ALT RBKT
             >;
         };
 
