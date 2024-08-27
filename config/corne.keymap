@@ -10,7 +10,7 @@
 
 / {
     behaviors {
-        balanced_homerow_mods: balanced_homerow_mods {
+        bh: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "BALANCED_HOMEROW_MODS";
             bindings = <&kp>, <&kp>;
@@ -33,10 +33,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                             &kp Q  &kp W  &kp E          &kp R                   &kp T          &kp Y      &kp U            &kp I              &kp O    &kp P     &kp BSPC
-&balanced_homerow_mods LSHIFT ESC   &kp A  &kp S  &kp D          &kp F                   &kp G          &kp H      &kp J            &kp K              &kp L    &kp SEMI  &balanced_homerow_mods RIGHT_SHIFT SQT
-&balanced_homerow_mods LCTRL GRAVE  &kp Z  &kp X  &kp C          &kp V                   &kp B          &kp N      &kp M            &kp COMMA          &kp DOT  &kp FSLH  &balanced_homerow_mods RCTRL BACKSLASH
-                                                  &mt LALT LBKT  &mt LEFT_COMMAND MINUS  &lt 1 SPACE    &lt 2 RET  &mt LCTRL EQUAL  &mt LEFT_ALT RBKT
+&kp TAB          &kp Q  &kp W  &kp E          &kp R                   &kp T          &kp Y      &kp U            &kp I              &kp O    &kp P     &kp BSPC
+&bh LSHIFT ESC   &kp A  &kp S  &kp D          &kp F                   &kp G          &kp H      &kp J            &kp K              &kp L    &kp SEMI  &bh RIGHT_SHIFT SQT
+&bh LCTRL GRAVE  &kp Z  &kp X  &kp C          &kp V                   &kp B          &kp N      &kp M            &kp COMMA          &kp DOT  &kp FSLH  &bh RCTRL BACKSLASH
+                               &bh LALT LBKT  &bh LEFT_COMMAND EQUAL  &lt 1 SPACE    &lt 2 RET  &bh LCTRL MINUS  &bh LEFT_ALT RBKT
             >;
         };
 
@@ -50,7 +50,7 @@
             bindings = <
 &kp TAB             &kp N1         &kp N2     &kp N3           &kp N4        &kp N5       &kp N6    &kp N7     &kp N8         &kp N9     &kp N0  &kp BSPC
 &mt LEFT_SHIFT ESC  &kp LC(LS(T))  &kp LG(W)  &kp LC(LS(TAB))  &kp LC(TAB)   &kp LC(T)    &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT  &trans  &kp LEFT_SHIFT
-&mt LCTRL GRAVE     &trans         &trans     &trans           &trans        &trans       &trans    &trans     &trans         &trans     &trans  &balanced_homerow_mods RCTRL BACKSLASH
+&mt LCTRL GRAVE     &trans         &trans     &trans           &trans        &trans       &trans    &trans     &trans         &trans     &trans  &bh RCTRL BACKSLASH
                                               &kp LEFT_ALT     &kp LEFT_GUI  &kp SPACE    &kp RET   &kp LCTRL  &kp RIGHT_ALT
             >;
         };
