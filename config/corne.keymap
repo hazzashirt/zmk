@@ -109,10 +109,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp DEL     &kp N1         &kp N2        &kp N3           &kp N4        &kp N5           &kp N6     &kp N7     &kp N8         &kp N9     &kp N0  &kp BSPC
-&kp ESCAPE  &kp LCTRL      &kp LEFT_ALT  &kp LEFT_SHIFT   &kp LEFT_GUI  &kp LG(ENTER)    &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &trans  &kp LEFT_SHIFT
-&kp LC(UP)  &kp LG(LS(T))  &kp LG(W)     &kp LC(LS(TAB))  &kp LC(TAB)   &kp LG(T)        &kp LC(A)  &trans     &trans         &kp LC(E)  &trans  &bh RCTRL BACKSLASH
-                                         &trans           &trans        &trans           &kp RET    &kp LCTRL  &kp RIGHT_ALT
+&kp DEL     &kp N1         &kp N2        &kp N3           &kp N4        &kp N5       &kp N6     &kp N7     &kp N8         &kp N9     &kp N0  &kp BSPC
+&kp F13     &kp LCTRL      &kp LEFT_ALT  &kp LEFT_SHIFT   &kp LEFT_GUI  &kp ENTER    &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &trans  &kp LEFT_SHIFT
+&kp LC(UP)  &kp LG(LS(T))  &kp LG(W)     &kp LC(LS(TAB))  &kp LC(TAB)   &kp LG(T)    &kp LC(A)  &trans     &trans         &kp LC(E)  &trans  &bh RCTRL BACKSLASH
+                                         &trans           &trans        &trans       &kp RET    &kp LCTRL  &kp RIGHT_ALT
             >;
         };
 
