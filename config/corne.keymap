@@ -94,10 +94,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                              &kp Q                                &kp W                                   &kp E                              &kp R                                       &kp T          &kp Y      &kp U                                   &kp I                                  &kp O                                   &kp P                                               &kp BSPC
-&hold_pref_homerow_mods LSHIFT ESC   &tap_preferred_homerow_mods LCTRL A  &tap_preferred_homerow_mods LEFT_ALT S  &require_prior_idle LEFT_SHIFT D   &tap_preferred_homerow_mods LEFT_GUI F      &kp G          &kp H      &tap_preferred_homerow_mods LEFT_GUI J  &require_prior_idle LEFT_SHIFT K       &tap_preferred_homerow_mods LEFT_ALT L  &tap_preferred_homerow_mods LEFT_CONTROL SEMICOLON  &tap_preferred_homerow_mods RIGHT_SHIFT SQT
-&hold_pref_homerow_mods LCTRL GRAVE  &kp Z                                &kp X                                   &kp C                              &kp V                                       &kp B          &kp N      &kp M                                   &kp COMMA                              &kp DOT                                 &kp FSLH                                            &hold_pref_homerow_mods RCTRL BACKSLASH
-                                                                                                                  &hold_pref_homerow_mods LALT LBKT  &hold_pref_homerow_mods LEFT_COMMAND EQUAL  &lt 1 SPACE    &lt 2 RET  &hold_pref_homerow_mods LEFT_GUI MINUS  &hold_pref_homerow_mods LEFT_ALT RBKT
+&kp LC(GRAVE)                               &kp Q                                &kp W                                   &kp E                                       &kp R                                     &kp T          &kp Y      &kp U                                       &kp I                                       &kp O                                   &kp P                                               &kp BSPC
+&hold_pref_homerow_mods LSHIFT ESC          &tap_preferred_homerow_mods LCTRL A  &tap_preferred_homerow_mods LEFT_ALT S  &require_prior_idle LEFT_SHIFT D            &tap_preferred_homerow_mods LEFT_GUI F    &kp G          &kp H      &tap_preferred_homerow_mods LEFT_GUI J      &require_prior_idle LEFT_SHIFT K            &tap_preferred_homerow_mods LEFT_ALT L  &tap_preferred_homerow_mods LEFT_CONTROL SEMICOLON  &tap_preferred_homerow_mods RIGHT_SHIFT SQT
+&hold_pref_homerow_mods LCTRL LEFT_BRACKET  &kp Z                                &kp X                                   &kp C                                       &kp V                                     &kp B          &kp N      &kp M                                       &kp COMMA                                   &kp DOT                                 &kp FSLH                                            &hold_pref_homerow_mods RCTRL BACKSLASH
+                                                                                                                         &hold_pref_homerow_mods LALT RIGHT_BRACKET  &hold_pref_homerow_mods LEFT_COMMAND TAB  &lt 1 SPACE    &lt 2 RET  &tap_preferred_homerow_mods LEFT_GUI MINUS  &tap_preferred_homerow_mods LEFT_ALT EQUAL
             >;
         };
 
@@ -109,10 +109,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp DEL     &kp N1         &kp N2        &kp N3           &kp N4        &kp N5       &kp N6     &kp N7     &kp N8         &kp N9     &kp N0  &kp BSPC
-&kp F13     &kp LCTRL      &kp LEFT_ALT  &kp LEFT_SHIFT   &kp LEFT_GUI  &kp ENTER    &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &trans  &kp LEFT_SHIFT
-&kp LC(UP)  &kp LG(LS(T))  &kp LG(W)     &kp LC(LS(TAB))  &kp LC(TAB)   &kp LG(T)    &kp LC(A)  &trans     &trans         &kp LC(E)  &trans  &bh RCTRL BACKSLASH
-                                         &trans           &trans        &trans       &kp RET    &kp LCTRL  &kp RIGHT_ALT
+&kp LC(UP_ARROW)  &kp N1         &kp N2        &kp N3           &kp N4        &kp N5       &kp N6     &kp N7     &kp N8         &kp N9     &kp N0  &kp DEL
+&kp F13           &kp LCTRL      &kp LEFT_ALT  &kp LEFT_SHIFT   &kp LEFT_GUI  &kp ENTER    &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &trans  &kp LEFT_SHIFT
+&kp LA(DELETE)    &kp LG(LS(T))  &kp LG(W)     &kp LC(LS(TAB))  &kp LC(TAB)   &kp LG(T)    &kp LC(A)  &trans     &trans         &kp LC(E)  &trans  &bh RCTRL BACKSLASH
+                                               &trans           &trans        &trans       &kp RET    &kp LCTRL  &kp RIGHT_ALT
             >;
         };
 
